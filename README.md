@@ -1,6 +1,6 @@
 # eta-delivery-shopify
 
-![image](https://user-images.githubusercontent.com/1571083/201982515-2d8e5828-2db1-4d5e-9128-11ed48acd5ad.png)
+![image](https://user-images.githubusercontent.com/1571083/202011607-33e55edc-63bf-4e9f-a528-3205f1c155f6.png)
 
 !CSS NOT INCLUDED, YOU MUST STYLE IT YOURSELF.
 !ESTIMATED DAYS ARE SKIPPING WEEKENDS
