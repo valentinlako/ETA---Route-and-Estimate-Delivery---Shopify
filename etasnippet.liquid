@@ -1,0 +1,66 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" integrity="sha512-/n/dTQBO8lHzqqgAQvy0ukBQ0qLmGzxKhn8xKrz4cn7XJkZzy+fAtzjnOQd5w55h4k1kUC+8oIe6WmrGUYwODA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div class="v-route-cont">
+  <p class="ma2 white">Route and Estimated Delivery</p>
+    <p>Estimated Arrival</p>
+    <h3 class="v-estimated-date">30 Sep. - 19 Oct.</h3>
+  <div class="v-route-wrapper">
+    <div class="v-route-block">
+      <img src="" />
+      <div class="v-route-block-text">
+        <h4 class="v-route-placed">25 Sep.</h4>
+        <p>Order placed</p>
+      </div>
+    </div>
+    <div class="v-route-block">
+      <img src="" />
+      <div class="v-route-block-text">
+        <h4 class="v-route-dispatches">25 Sep.</h4>
+        <p>Personalization, Production, Packaging, Shipping</p>
+        <span></span>
+      </div>
+    </div>
+    <div class="v-route-block">
+      <img src="" />
+      <div class="v-route-block-text">
+        <h4 class="v-estimated-date2">25 Sep.</h4>
+        <p>Delivery</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function etaDelivery() {
+    var placedEl = document.querySelector('.v-route-placed');
+    var dispatchedEl = document.querySelector('.v-route-dispatches');
+    var estimatedEl = document.querySelector('.v-estimated-date');
+    var estimatedEl2 = document.querySelector('.v-estimated-date2');
+
+    var today = Date.today();
+    
+    var fromDate = Date.today().addDays(7);
+    var toDate = Date.today().addDays(21);
+    var processingFromDate = Date.today().addDays(2);
+    var processingToDate = Date.today().addDays(5);
+
+    if (fromDate.is().saturday() || fromDate.is().sunday()) { 
+      fromDate = fromDate.next().monday();
+    }
+    if (toDate.is().saturday() || toDate.is().sunday()) { 
+      toDate = toDate.next().monday(); 
+    }
+    if (processingFromDate.is().saturday() || processingFromDate.is().sunday()) { 
+      processingFromDate = processingFromDate.next().monday();
+    }
+    if (processingToDate.is().saturday() || processingToDate.is().sunday()) { 
+      processingToDate = processingToDate.next().monday();
+    }
+    estimatedEl.innerHTML = fromDate.toString('MMM dS') + " - " + toDate.toString('MMM dS');
+    estimatedEl2.innerHTML = fromDate.toString('MMM dS') + " - " + toDate.toString('MMM dS');
+    placedEl.innerHTML = today.toString('MMM dS');
+    dispatchedEl.innerHTML = processingFromDate.toString('MMM dS') + " - " + processingToDate.toString('MMM dS');
+  }
+
+  etaDelivery();
+</script>
