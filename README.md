@@ -1,6 +1,7 @@
 # eta-delivery-shopify
 
-![image](https://user-images.githubusercontent.com/1571083/201982134-fdebf9bd-9a42-4641-9614-72e8ed0af2a1.png)
+![image](https://user-images.githubusercontent.com/1571083/201982515-2d8e5828-2db1-4d5e-9128-11ed48acd5ad.png)
+
 
 SETUP
 
