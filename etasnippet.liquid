@@ -22,7 +22,7 @@
     <div class="v-route-block">
       <img src="" />
       <div class="v-route-block-text">
-        <h4 class="v-estimated-date2">25 Sep.</h4>
+        <h4 class="v-estimated-date">25 Sep.</h4>
         <p>Delivery</p>
       </div>
     </div>
@@ -31,10 +31,9 @@
 
 <script>
   function etaDelivery() {
-    var placedEl = document.querySelector('.v-route-placed');
-    var dispatchedEl = document.querySelector('.v-route-dispatches');
-    var estimatedEl = document.querySelector('.v-estimated-date');
-    var estimatedEl2 = document.querySelector('.v-estimated-date2');
+    var placedEl = document.getElementsByClassName('v-route-placed');
+    var dispatchedEl = document.getElementsByClassName('v-route-dispatches');
+    var estimatedEl = document.getElementsByClassName('v-estimated-date');
 
     var today = Date.today();
     
@@ -55,10 +54,16 @@
     if (processingToDate.is().saturday() || processingToDate.is().sunday()) { 
       processingToDate = processingToDate.next().monday();
     }
-    estimatedEl.innerHTML = fromDate.toString('MMM dS') + " - " + toDate.toString('MMM dS');
-    estimatedEl2.innerHTML = fromDate.toString('MMM dS') + " - " + toDate.toString('MMM dS');
-    placedEl.innerHTML = today.toString('MMM dS');
-    dispatchedEl.innerHTML = processingFromDate.toString('MMM dS') + " - " + processingToDate.toString('MMM dS');
+
+    for(let i=0; i<placedEl.length; i++) {
+      placedEl[i].innerHTML = today.toString('MMM dS');
+    }
+    for(let i=0; i<estimatedEl.length; i++) {
+      estimatedEl[i].innerHTML = fromDate.toString('MMM dS') + " - " + toDate.toString('MMM dS');
+    }
+    for(let i=0; i<placedEl.length; i++) {
+      dispatchedEl[i].innerHTML = processingFromDate.toString('MMM dS') + " - " + processingToDate.toString('MMM dS');
+    }
   }
 
   etaDelivery();
