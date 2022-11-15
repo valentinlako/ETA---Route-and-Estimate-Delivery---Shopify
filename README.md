@@ -3,6 +3,7 @@
 ![image](https://user-images.githubusercontent.com/1571083/201982515-2d8e5828-2db1-4d5e-9128-11ed48acd5ad.png)
 
 !CSS NOT INCLUDED, YOU MUST STYLE IT YOURSELF.
+!ESTIMATED DAYS ARE SKIPPING WEEKENDS
 
 SETUP
 
